@@ -7,8 +7,7 @@ public class Main {
         int month = 1;
 
         while (total <= 2_459_000) {
-            total = total + savings;
-            total = total + total / 100;
+            total = savings + total + total / 100;
             System.out.println("Месяц " + month + ", сумма накоплений равна " + total + " рублей");
             month++;
         }
@@ -16,21 +15,24 @@ public class Main {
         System.out.println("Задание №2");
         int i = 1;
         while (i <= 10) {
-            System.out.println(i);
+            System.out.print(i + " ");
             i++;
         }
 
+        System.out.println();
+
         for (i = 10; i >= 1; i = i - 1) {
-            System.out.println(i);
+            System.out.print(i + " ");
         }
 
-        System.out.println("Задание №3");
+
+        System.out.println("\nЗадание №3");
         int population = 12_000_000;
-        int birthRate = 17 * 1000;
-        int mortality = 8 * 1000;
+        int birthRate = 17;
+        int mortality = 8;
 
         for (int a = 2024; a <= 2034; a++) {
-            population = population + birthRate - mortality;
+            population = population + population / 1000 * (birthRate - mortality);
             System.out.println("Год " + a + ", численность населения составляет " + population);
         }
 
@@ -79,7 +81,7 @@ public class Main {
 
         System.out.println("Задание №8");
 
-        for (int year = 2024 - 200; year < 2024 + 100; year ++) {
+        for (int year = 2024 - 200; year < 2024 + 100; year++) {
             if (year % 79 == 0) {
                 System.out.println(year);
             }
