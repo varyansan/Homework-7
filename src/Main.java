@@ -3,37 +3,49 @@ public class Main {
 
         System.out.println("Задание №1");
         int savings = 15000;
-        int total = 0;
+        double total = 0;
         int month = 1;
+        double present = 1.01;
 
         while (total <= 2_459_000) {
-            total = (savings + total) + total / 100;
-            System.out.println("Месяц " + month + ", сумма накоплений равна " + total + " рублей");
+            total = (savings + total) * present;
+            System.out.printf("Месяц %s, сумма накоплений равна %.2f рублей%n", month, total);
             month++;
         }
 
         System.out.println("Задание №2");
         int i = 1;
+
         while (i <= 10) {
-            System.out.print(i + " ");
+            if (i < 10) {
+                System.out.print(i + " ");
+            } else {
+                System.out.print(i);
+            }
             i++;
         }
 
         System.out.println();
 
         for (i = 10; i >= 1; i = i - 1) {
-            System.out.print(i + " ");
+            if (i > 1) {
+                System.out.print(i + " ");
+            } else {
+                System.out.print(i);
+            }
         }
 
 
         System.out.println("\nЗадание №3");
-        int population = 12_000_000;
-        int birthRate = 17;
-        int mortality = 8;
+        double population = 12_000_000;
+        double birthRate;
+        double mortality;
 
         for (int a = 2024; a <= 2034; a++) {
-            population = population + (population/1000 * (birthRate - mortality));
-            System.out.println("Год " + a + ", численность населения составляет " + population);
+            birthRate = population * 0.017;
+            mortality = population * 0.008;
+            population = population + birthRate - mortality;
+            System.out.printf("Год %s, численность населения составляет %.0f%n", a, population);
         }
 
         System.out.println("Задание №4");
@@ -86,7 +98,6 @@ public class Main {
                 System.out.println(year);
             }
         }
-
     }
 }
 
