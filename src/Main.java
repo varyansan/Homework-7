@@ -8,7 +8,7 @@ public class Main {
         double present = 1.01;
 
         while (total <= 2_459_000) {
-            total = (savings + total) * present;
+            total = savings + total * present;
             System.out.printf("Месяц %s, сумма накоплений равна %.2f рублей%n", month, total);
             month++;
         }
@@ -42,8 +42,8 @@ public class Main {
         double mortality;
 
         for (int a = 2024; a <= 2034; a++) {
-            birthRate = population * 0.017;
-            mortality = population * 0.008;
+            birthRate = population * 17/1000;
+            mortality = population * 8/1000;
             population = population + birthRate - mortality;
             System.out.printf("Год %s, численность населения составляет %.0f%n", a, population);
         }
