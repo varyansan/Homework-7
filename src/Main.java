@@ -7,7 +7,7 @@ public class Main {
         int month = 1;
 
         while (total <= 2_459_000) {
-            total = savings + total + total / 100;
+            total = (savings + total) + total / 100;
             System.out.println("Месяц " + month + ", сумма накоплений равна " + total + " рублей");
             month++;
         }
@@ -32,7 +32,7 @@ public class Main {
         int mortality = 8;
 
         for (int a = 2024; a <= 2034; a++) {
-            population = population + population / 1000 * (birthRate - mortality);
+            population = population + (population/1000 * (birthRate - mortality));
             System.out.println("Год " + a + ", численность населения составляет " + population);
         }
 
