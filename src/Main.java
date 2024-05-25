@@ -37,15 +37,15 @@ public class Main {
 
 
         System.out.println("\nЗадание №3");
-        double population = 12_000_000;
-        double birthRate;
-        double mortality;
+        int population = 12_000_000;
+        int birthRate;
+        int mortality;
 
         for (int a = 2024; a <= 2034; a++) {
             birthRate = (population/1000) * 17;
             mortality = (population/1000) * 8;
             population = population + birthRate - mortality;
-            System.out.printf("Год %s, численность населения составляет %.0f%n", a, population);
+            System.out.printf("Год %s, численность населения составляет %s%n", a, population);
         }
 
         System.out.println("Задание №4");
