@@ -42,8 +42,8 @@ public class Main {
         double mortality;
 
         for (int a = 2024; a <= 2034; a++) {
-            birthRate = population * 17/1000;
-            mortality = population * 8/1000;
+            birthRate = (population/1000) * 17;
+            mortality = (population/1000) * 8;
             population = population + birthRate - mortality;
             System.out.printf("Год %s, численность населения составляет %.0f%n", a, population);
         }
